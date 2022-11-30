@@ -18,16 +18,16 @@ export const putDb = async (id, content) => {
     console.log("PUT to the database");
 
     // Create a connection to the  database and version we want to use.
-    const jateDb = await openDB("JATE", 1);
+    const jateDb = await openDB("jate", 1);
 
     // Create a new transaction and specify the database and data privileges.
-    const transactionJate = jateDb.transaction("JATE", "readwrite");
+    const transactionJate = jateDb.transaction("jate", "readwrite");
 
     // Open up the desired object store.
-    const jateObjStore = transactionJate.objectStore("JATE");
+    const jateObjStore = transactionJate.objectStore("jate");
 
     // Use the .getAll() method to get all data in the database.
-    const putRequest = jateObjStore.put({ id: id, text: content });
+    const putRequest = jateObjStore.put({ id: id, content: content });
 
     // Get confirmation of the request.
     const result = await putRequest;
@@ -44,13 +44,13 @@ export const getDb = async () => {
     console.log("GET from the database");
 
     // Create a connection to the  database and version we want to use.
-    const jateDb = await openDB("JATE", 1);
+    const jateDb = await openDB("jate", 1);
 
     // Create a new transaction and specify the database and data privileges.
-    const transactionJate = jateDb.transaction("JATE", "readonly");
+    const transactionJate = jateDb.transaction("jate", "readonly");
 
     // Open up the desired object store.
-    const jateObjStore = transactionJate.objectStore("JATE");
+    const jateObjStore = transactionJate.objectStore("jate");
 
     // Use the .getAll() method to get all data in the database.
     const getAllRequest = jateObjStore.getAll();
