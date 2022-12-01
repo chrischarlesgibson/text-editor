@@ -19,9 +19,10 @@ The purpose of this project was to create to progressive web application text ed
 
 ## Installation
 
-here are the dependencies needed to run this app:
+Here are the dependencies needed to run this app:
 
-````"devDependencies": {
+```
+"devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
@@ -41,13 +42,15 @@ here are the dependencies needed to run this app:
     "code-mirror-themes": "^1.0.0",
     "idb": "^6.1.2"
   }
-}```
+}
+
+```
 
 ## Usage
 
-First, download the dependencies by running "npm install", next make sure your mongoDB/ MongoDB compass is up and running. Finally, type "node index.js" in the integrated terminal and click enter. Go to Insomnia and test out the routes yourself to see how it works!
+Just click on the heroku link to open the app or if you want to use this app locally, first go to the to root directory, (in this case text-editor) and run open an integrated terminal and run "npm run start". This will build the bundle and put it in a folder called 'dist'. The app should now be up and running on localhost:3000. You can also install the app onto your computor.
 
-![GIF of app in action]()
+![GIF of app in action](./Assets/jate.png)
 
 ## Built With
 
@@ -80,4 +83,3 @@ If you would like to contribute to this app, please contact me and we can discus
 ## License
 
 Licensed under the MIT license.[License details here](https://opensource.org/licenses/MIT)
-````
